@@ -6,7 +6,7 @@ const Header = () => {
             <input 
                 className='outline-none h-full w-[90%]'
                 type="text" 
-                name="" 
+                placeholder="Enter a meal name"
                 id="search" 
             />
             <i className="fa-solid fa-magnifying-glass pl-3"></i>
