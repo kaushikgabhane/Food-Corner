@@ -2,7 +2,7 @@ import React from 'react'
 
 const Card = () => {
   return (
-    <div className='Card w-[250px] h-auto p-5 bg-slate-200 rounded-md shadow-2xl'>
+    <div className='Card w-[250px] h-auto p-5 m-5 bg-slate-200 rounded-md shadow-2xl'>
         <img 
             src="https://cdn.britannica.com/98/235798-050-3C3BA15D/Hamburger-and-french-fries-paper-box.jpg" 
             alt="Food Img" 

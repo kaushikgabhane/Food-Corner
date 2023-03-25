@@ -1,18 +1,11 @@
 import Header from "./Components/Header"
-import Card from "./Components/Card";
+import Body from "./Components/Body";
 
 function App() {
   return (
     <div className="App">
       <Header />
-
-      <div className="flex justify-around items-center">
-        <Card />
-        <Card />
-        <Card />
-
-      </div>
-
+      <Body />
     </div>
   );
 }
