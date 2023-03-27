@@ -1,6 +1,8 @@
 import React from 'react'
 
-const Card = () => {
+const Card = (props) => {
+
+  
   return (
     <div className='Card w-[250px] h-auto p-5 m-5 bg-slate-200 rounded-md shadow-2xl'>
         <img 
@@ -8,7 +10,7 @@ const Card = () => {
             alt="Food Img" 
             className='rounded-md h-[50%] w-[100%]' 
         />
-        <h4>Name</h4>
+        <h4>{props.name}</h4>
         <h4>Origin</h4>
         <p>Description</p>
     </div>
