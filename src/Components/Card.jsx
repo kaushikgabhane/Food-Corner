@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Card = (props) => {
+const Card = ({name}) => {
 
   
   return (
@@ -10,7 +10,7 @@ const Card = (props) => {
             alt="Food Img" 
             className='rounded-md h-[50%] w-[100%]' 
         />
-        <h4>{props.name}</h4>
+        <h4>Name{name}</h4>
         <h4>Origin</h4>
         <p>Description</p>
     </div>
