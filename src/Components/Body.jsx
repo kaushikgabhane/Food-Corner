@@ -1,19 +1,19 @@
 
 import axios from "axios";
 
-import Card from "./Card";
 import { useState , useEffect } from "react";
 
 const Body = () => {
 
     const [details,setDetails] = useState({});
+    const [search,setSearch] = useState("a");
 
     const fetchData = async() => {
 
-        const {data} = await axios.get('https://www.themealdb.com/api/json/v1/1/random.php');
+        const {data} = await axios.get(`https://www.themealdb.com/api/json/v1/1/search.php?f=${search}`);
         
         console.log(data);
-        const fetchDetails = data.meals[0];
+        const fetchDetails = data.meals;
         setDetails(fetchDetails);
 
     }
@@ -22,8 +22,21 @@ const Body = () => {
         fetchData();
     },[])
 
+    const handleClick = (e) => {
+        setSearch(e.target.innerText);
+        console.log(details);
+    }
+
+
     return (
-        <Card name={details.strMeal} img={details.strMealThumb} Tags={details.strTags} Description={details.strInstructions}/>
+        <>
+            <button 
+                className=" px-4 py-2 bg-cyan-200 text-slate-800 font-semibold rounded-full fixed bottom-16"
+                onClick={(e) => handleClick(e)}
+            >
+                b
+            </button>
+        </>
     );
 }
 
