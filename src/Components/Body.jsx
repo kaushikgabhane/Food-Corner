@@ -2,19 +2,28 @@
 import axios from "axios";
 
 import Card from "./Card";
+import { useState , useEffect } from "react";
 
 const Body = () => {
+
+    const [details,setDetails] = useState({});
+
     const fetchData = async() => {
 
         const {data} = await axios.get('https://www.themealdb.com/api/json/v1/1/random.php');
-        console.log("responce",data);
-        return data;
+        
+        console.log(data);
+        const fetchDetails = data.meals[0];
+        setDetails(fetchDetails);
+
     }
     
-    // console.log(fetchData);
+    useEffect(()=>{
+        fetchData();
+    },[])
 
     return (
-        <Card name={fetchData}/>
+        <Card name={details.strMeal} img={details.strMealThumb} Tags={details.strTags} Description={details.strInstructions}/>
     );
 }
 
