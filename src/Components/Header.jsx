@@ -1,6 +1,6 @@
 const Header = () => {
     return (
-      <header className="header flex flex-row bg-slate-100 justify-between p-3 px-10 shadow-md">
+      <header className="header w-full flex flex-row bg-slate-100 justify-between p-3 px-10 shadow-md fixed top-0">
           <h3 className="logo font-serif font-bold text-2xl text-fuchsia-600">Food Corner</h3>
           <div className="border-2 w-96 bg-white">
             <input 

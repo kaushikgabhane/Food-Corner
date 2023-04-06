@@ -1,18 +1,19 @@
 import React from 'react'
 
-const Card = () => {
+const Card = ({details}) => {
 
   
   return (
-    <div className='Card w-[300px] h-[400px] p-5 m-5 bg-slate-200 rounded-md shadow-2xl'>
-        <img 
-            src={img} 
-            alt="Food Img" 
-            className='rounded-md h-[300px] w-auto m-auto' 
-        />
-        <h4> <strong> Name of food :</strong> </h4>
-        <h4> <strong> Tags :</strong> </h4>
-        <p><strong> Description :</strong></p>
+    <div className=' w-[300px] h-auto p-5 m-5 flex flex-col gap-2 bg-slate-200 rounded-md shadow-2xl'>
+      <img 
+          src={details.strMealThumb} 
+          alt="Food Img" 
+          className='rounded-md  m-auto' 
+      />
+      <h4 className='w-[250px] '> <strong> Name of food : </strong>{details.strMeal} </h4>
+      <p  className='w-[250px] '> <strong>Category : </strong>{details.strCategory}</p>
+      <h4 className='max-w-fit '> <strong>Meal Area : </strong>{details.strArea} </h4>
+      <p  className='w-[250px] '> <strong>Watch receipe : </strong> <a href={details.strYoutube} target="_blank" rel="noopener noreferrer">Here</a></p>
     </div>
   );
 }

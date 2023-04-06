@@ -1,7 +1,14 @@
 
 import { useState , useEffect } from "react";
 import axios from "axios";
+import { v4 } from "uuid";
+
+
 import Pagination from "./Pagination";
+import Card from './Card';
+
+
+
 
 const Body = () => {
 
@@ -12,11 +19,10 @@ const Body = () => {
 
         const {data} = await axios.get(`https://www.themealdb.com/api/json/v1/1/search.php?f=${search}`);
         
-        console.log(data);
-        const fetchDetails = data.meals;
-        setDetails(fetchDetails);
-
+        setDetails(data);
+        
     }
+    console.log(details);
     
     useEffect(()=>{
         fetchData();
@@ -28,10 +34,22 @@ const Body = () => {
 
 
     return (
-        <>
+        <div className="flex gap-4">
             <Pagination handleClick={handleClick}/>
+            <div className="flex flex-wrap justify-center ml-28 mt-14 mb-12 ">
+                {
+                    details.meals?.map((ele)=>{
+                       return <Card details={ele} key={v4()}/>
+                   })
+                }
+
+            </div>
+
             
-        </>
+            
+
+            
+        </div>
     );
 }
 
