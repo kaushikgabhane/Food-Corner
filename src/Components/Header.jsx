@@ -1,20 +1,25 @@
+import { Link } from "react-router-dom";
+
+
+
 const Header = () => {
     return (
       <header className="header w-full flex flex-row bg-slate-100 justify-between p-3 px-10 shadow-md fixed top-0">
-          <h3 className="logo font-serif font-bold text-2xl text-fuchsia-600">Food Corner</h3>
-          <div className="border-2 w-96 bg-white">
-            <input 
-                className='outline-none h-full w-[90%]'
-                type="text" 
-                placeholder="Enter a meal name"
-                id="search" 
-            />
-            <i className="fa-solid fa-magnifying-glass pl-3"></i>
-          </div>
+          <h3 className="logo font-serif font-bold text-2xl text-fuchsia-600 animate-bounce	">🍔Food Corner🍔</h3>
+         
           <ul className='navList flex list-none gap-10'>
-              <li className="font-bold text-lg text-blue-500">Home</li>
-              <li className="font-bold text-lg text-blue-500">Search More</li>
-              <li className="font-bold text-lg text-blue-500">Contact</li>
+              <Link to="/">
+                <li className="font-bold text-lg text-blue-500">Home</li>
+              </Link>
+              <Link to="/SearchBox">
+                <li className="font-bold text-lg text-blue-500">Search By Name</li>
+              </Link>
+              <Link to="/Random">
+                <li className="font-bold text-lg text-blue-500">Random Search</li>
+              </Link>
+              <Link to="/Contact">
+                <li className="font-bold text-lg text-blue-500">Contact</li>
+              </Link>
           </ul>
       </header>
   )};
