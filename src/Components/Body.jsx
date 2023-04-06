@@ -1,7 +1,7 @@
 
-import axios from "axios";
-
 import { useState , useEffect } from "react";
+import axios from "axios";
+import Pagination from "./Pagination";
 
 const Body = () => {
 
@@ -20,22 +20,17 @@ const Body = () => {
     
     useEffect(()=>{
         fetchData();
-    },[])
+    },[search])
 
     const handleClick = (e) => {
         setSearch(e.target.innerText);
-        console.log(details);
     }
 
 
     return (
         <>
-            <button 
-                className=" px-4 py-2 bg-cyan-200 text-slate-800 font-semibold rounded-full fixed bottom-16"
-                onClick={(e) => handleClick(e)}
-            >
-                b
-            </button>
+            <Pagination handleClick={handleClick}/>
+            
         </>
     );
 }
