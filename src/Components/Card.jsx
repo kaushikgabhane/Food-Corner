@@ -10,7 +10,7 @@ const Card = ({details}) => {
           alt="Food Img" 
           className='rounded-md  m-auto' 
       />
-      <h3 className='max-w-fit text-lg text-zinc-700 font-bold'> 
+      <h3 className='max-w-fit text-lg text-center text-zinc-700 font-bold'> 
         {details.strMeal} 
       </h3>
       <h4 className='max-w-fit font-semibold text-zinc-500'>
@@ -19,7 +19,7 @@ const Card = ({details}) => {
       <h4  className='max-w-fit font-semibold text-gray-500'> 
         {details.strCategory}
       </h4>
-      <p  className='max-w-fit'>
+      <p  className='max-w-fit z-0'>
         <a href={details.strYoutube} target="_blank" rel="noopener noreferrer" className='text-blue-800 text-lg font-mono font-bold animate-pulse '> Watch Receipe</a>
       </p>
     </div>

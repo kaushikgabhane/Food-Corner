@@ -36,7 +36,7 @@ const Body = () => {
     return (
         <div className="flex gap-4">
             <Pagination handleClick={handleClick}/>
-            <div className="flex flex-wrap gap-6 justify-center ml-24 mt-14 mb-12 bg-slate-50">
+            <div className="flex flex-wrap gap-6 justify-center items-center  py-14  min-w-full min-h-full bg-slate-50 bg-gradient-to-r from-red-200 via-red-300 to-yellow-200">
                 {
                     details.meals?.map((ele)=>{
                        return <Card details={ele} key={v4()}/>
