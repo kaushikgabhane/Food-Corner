@@ -32,13 +32,13 @@ const Random = () => {
   return (
     <div className='RandomSearch min-h-screen mt-14 py-5  bg-gradient-to-r from-yellow-200 via-yellow-400 to-yellow-700'>
       <button 
-        className='p-5 m-3 bg-yellow-200 text-lg font-semibold rounded-xl sticky top-24 border-2 border-yellow-200 hover:border-2 hover:border-yellow-500'
+        className='p-5 m-3 bg-yellow-200 text-lg font-semibold rounded-xl md:sticky md:top-24 border-2 border-yellow-200 hover:border-2 hover:border-yellow-500'
         onClick={()=>randomSearch()}
       >
         Show Another
       </button>
       
-      <div className='min-w-screen min-h-max ml-16 pb-8 flex flex-col justify-center items-center gap-5'>
+      <div className='min-w-screen min-h-max md:ml-16 px-4 pb-8 flex flex-col justify-center items-center gap-5'>
         <img src={random[0]?.strMealThumb} alt="Meal picture" className='h-[350px] w-[350px]  rounded-md shadow-lg shadow-black'/>
         
         <h2 className='font-bold text-xl font-serif '>{random[0]?.strMeal}</h2>
