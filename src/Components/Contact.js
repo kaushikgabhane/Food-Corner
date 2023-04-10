@@ -2,6 +2,7 @@ import React from 'react'
 
 
 const Contact = () => {
+  
   return (
     <div className='h-screen flex flex-col justify-center items-center gap-10 pt-5 bg-gradient-to-r from-yellow-200 via-yellow-400 to-yellow-700'>
       <a href='https://www.linkedin.com/in/kaushik-gabhane-013708203/' target='_blank'  rel="noopener noreferrer" className='flex gap-5 items-center'>

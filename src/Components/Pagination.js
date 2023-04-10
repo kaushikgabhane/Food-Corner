@@ -5,19 +5,19 @@ import {RxArrowDown, RxArrowUp} from 'react-icons/rx';
 
 const Pagination = ({handleClick}) => {
 
-    const [toggle,setToggle] = useState(false);
+    const [toggle,setToggle] = useState(true);
 
     const arrayOfBtnText = ["a","b","c","d","e","f","g","h","i","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"];
   return (
     <>
         {
             toggle ? (
-            <RxArrowDown className='fixed top-16 left-5 bg-slate-100 p-2 rounded-full font-extrabold text-5xl shadow-inner shadow-black animate-bounce z-20 '
+            <RxArrowDown className='fixed top-16 left-5 bg-slate-100 p-2 rounded-full font-extrabold text-5xl shadow-inner shadow-black animate-bounce z-20 hover:cursor-pointer'
             onClick={()=> setToggle(!toggle)}/>
             )
             :
             (<RxArrowUp 
-                className='fixed top-16 left-5 bg-slate-100 p-2 rounded-full font-extrabold text-5xl shadow-inner shadow-black animate-bounce z-20 '
+                className='fixed top-16 left-5 bg-slate-100 p-2 rounded-full font-extrabold text-5xl shadow-inner shadow-black animate-bounce z-20 hover:cursor-pointer'
                 onClick={()=> setToggle(!toggle)}
             />
             )

@@ -1,6 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+
 import './index.css';
+
 import Home from './Components/Home';
 import SearchBox from './Components/SearchBox';
 import Random from './Components/Random';
