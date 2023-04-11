@@ -22,7 +22,6 @@ const Body = () => {
         setDetails(data);
         
     }
-    console.log(details);
     
     useEffect(()=>{
         fetchData();
@@ -36,7 +35,7 @@ const Body = () => {
     return (
         <div className="flex gap-4">
             <Pagination handleClick={handleClick}/>
-            <div className="flex flex-wrap gap-6 justify-center items-center pl-10 py-16 mx-auto min-w-full min-h-full bg-gradient-to-r from-yellow-200 via-yellow-400 to-yellow-700">
+            <div className="flex flex-wrap gap-6 justify-center items-center pl-10 py-16 mx-auto min-w-full min-h-screen bg-gradient-to-r from-yellow-200 via-yellow-400 to-yellow-700">
                 {
                     details.meals?.map((ele)=>{
                        return <Card details={ele} key={v4()}/>

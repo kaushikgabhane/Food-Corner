@@ -18,7 +18,6 @@ const SearchBox = () => {
       setDetails(data);
         
     }
-    console.log(details);
     
     useEffect(()=>{
       fetchData();

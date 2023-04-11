@@ -17,7 +17,6 @@ const Random = () => {
     const fetchDetails = data.meals;
     setRandom(fetchDetails);
   }
-  console.log(random);
   
   useEffect(()=>{
     fetchData();
